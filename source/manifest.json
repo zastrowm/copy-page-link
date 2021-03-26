@@ -1,8 +1,8 @@
 {
-	"name": "Awesome Extension",
-	"version": "0.0.0",
-	"description": "An awesome new browser extension",
-	"homepage_url": "https://github.com/awesome-templates/browser-extension-template",
+	"name": "Copy Page Link",
+	"version": "1.0.0",
+	"description": "Copies a pretty-link to the current page",
+	"homepage_url": "https://github.com/zastrowm/copy-page-link",
 	"manifest_version": 2,
 	"minimum_chrome_version": "74",
 	"applications": {
@@ -12,19 +12,20 @@
 		}
 	},
 	"icons": {
-		"128": "icon.png"
+		"64": "icons/icon-64.png",
+		"128": "icons/icon-128.png",
+		"512": "icons/icon-512.png"
 	},
-	"permissions": [
-		"storage"
-	],
+	"browser_action": {
+		"default_title": "Copy page url + title to clipboard"
+	},
+	"permissions": ["activeTab", "clipboardWrite"],
 	"options_ui": {
 		"chrome_style": true,
 		"page": "options.html"
 	},
 	"background": {
-		"persistent": false,
-		"scripts": [
-			"background.js"
-		]
+		"scripts": ["background.js"],
+		"persistent": false
 	}
 }
