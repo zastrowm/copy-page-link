@@ -1,20 +1,20 @@
 {
 	"name": "Copy Page Link",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Copies a pretty-link to the current page",
 	"homepage_url": "https://github.com/zastrowm/copy-page-link",
 	"manifest_version": 2,
 	"minimum_chrome_version": "74",
-	"applications": {
-		"gecko": {
-			"id": "awesome-extension@notlmn.github.io",
-			"strict_min_version": "67.0"
-		}
-	},
 	"icons": {
 		"64": "icons/icon-64.png",
 		"128": "icons/icon-128.png",
 		"512": "icons/icon-512.png"
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{bc167d51-33c7-494e-9ba9-227bee9d2fff}",
+			"strict_min_version": "67.0"
+		}
 	},
 	"browser_action": {
 		"default_title": "Copy page url + title to clipboard"
