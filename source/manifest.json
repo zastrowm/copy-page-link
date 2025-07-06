@@ -4,7 +4,7 @@
 	"description": "Copies a pretty-link to the current page",
 	"homepage_url": "https://github.com/zastrowm/copy-page-link",
 	"manifest_version": 3,
-	"minimum_chrome_version": "74",
+	"minimum_chrome_version": "100",
 	"icons": {
 		"64": "icons/icon-64.png",
 		"128": "icons/icon-128.png",
