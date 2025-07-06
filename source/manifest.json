@@ -3,7 +3,7 @@
 	"version": "1.1.1",
 	"description": "Copies a pretty-link to the current page",
 	"homepage_url": "https://github.com/zastrowm/copy-page-link",
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"minimum_chrome_version": "74",
 	"icons": {
 		"64": "icons/icon-64.png",
@@ -16,16 +16,16 @@
 			"strict_min_version": "67.0"
 		}
 	},
-	"browser_action": {
+	"action": {
 		"default_title": "Copy page url + title to clipboard"
 	},
-	"permissions": ["activeTab", "clipboardWrite"],
+	"permissions": ["activeTab", "clipboardWrite", "scripting"],
 	"options_ui": {
-		"chrome_style": true,
+		"open_in_tab": false,
 		"page": "options.html"
 	},
 	"background": {
-		"scripts": ["background.js"],
-		"persistent": false
+		"service_worker": "background.js",
+		"type": "module"
 	}
 }
